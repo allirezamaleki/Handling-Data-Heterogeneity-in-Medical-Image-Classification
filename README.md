@@ -2,7 +2,7 @@
 
 A federated learning implementation for medical image classification using the SCAFFOLD algorithm on skin lesion datasets (ISIC 2019).
 
-## 🔬 Overview
+##  Overview
 
 This project implements a federated learning approach to handle data heterogeneity in medical image classification. It uses the SCAFFOLD (Stochastic Controlled Averaging for Federated Learning) algorithm to train Vision Transformer (ViT) models on distributed medical datasets while preserving data privacy.
 
@@ -14,7 +14,7 @@ This project implements a federated learning approach to handle data heterogenei
 - **Medical Image Focus**: Specialized data augmentations for medical imaging (ISIC skin lesion dataset)
 - **Comprehensive Metrics**: Tracks accuracy, F1-score, precision, recall, and AUC-ROC
 
-## 📊 Dataset
+##  Dataset
 
 The project uses the **ISIC 2019** (International Skin Imaging Collaboration) dataset, specifically the federated version:
 - **Dataset**: `flwrlabs/fed-isic2019`
@@ -22,7 +22,7 @@ The project uses the **ISIC 2019** (International Skin Imaging Collaboration) da
 - **Distribution**: Naturally partitioned by medical centers to simulate real-world federated scenarios
 - **Classes**: Multiple skin lesion types (melanoma, nevus, basal cell carcinoma, etc.)
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Model Architecture
 - **Base Model**: Vision Transformer (ViT-Base/16-224)
@@ -36,7 +36,7 @@ The project uses the **ISIC 2019** (International Skin Imaging Collaboration) da
 - **Client Selection**: All available medical centers participate
 - **Communication**: Model parameters only (no raw data sharing)
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.8+
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 - `flwr-datasets>=0.0.2` - Federated datasets
 - `datasets>=2.14.0` - Hugging Face datasets
 
-## 💻 Usage
+##  Usage
 
 ### Basic Usage
 ```bash
@@ -81,7 +81,7 @@ The project includes medical image-specific augmentations in `data_loader.py`:
 - Color jittering (brightness, contrast, saturation, hue)
 - Small translations and scaling
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -126,7 +126,7 @@ The project includes medical image-specific augmentations in `data_loader.py`:
 - DataLoader creation for training and testing
 - Natural heterogeneity preservation
 
-## 🧮 Algorithms
+##  Algorithms
 
 ### SCAFFOLD (Stochastic Controlled Averaging)
 
@@ -156,7 +156,7 @@ SCAFFOLD addresses client drift in federated learning by maintaining control var
    - Evaluate on global test set
    - Track comprehensive metrics
 
-## 📈 Metrics
+##  Metrics
 
 The system tracks comprehensive evaluation metrics:
 
@@ -166,7 +166,7 @@ The system tracks comprehensive evaluation metrics:
 - **Recall**: Sensitivity/true positive rate
 - **AUC-ROC**: Area under receiver operating characteristic curve
 
-## 🔧 Customization
+##  Customization
 
 ### Adding New Models
 Extend `model.py` with new architectures:
@@ -198,7 +198,7 @@ Key parameters to experiment with:
 - `ROUNDS`: Total federated training duration
 - Batch size in `data_loader.py`
 
-## 🔬 Research Context
+##  Research Context
 
 ### Medical Image Federated Learning
 - **Privacy Preservation**: No patient data leaves medical institutions
@@ -212,7 +212,7 @@ Key parameters to experiment with:
 - **Theoretical Guarantees**: Proven convergence properties
 - **Client Drift Correction**: Maintains global optimization direction
 
-## 📋 Results
+##  Results
 
 The system provides detailed logging:
 
@@ -227,26 +227,13 @@ Round 1/15
   F1: 0.5234, Precision: 0.5123, Recall: 0.5345, AUC: 0.7456
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## 📜 License
-
-This project is open source. Please check the repository for license information.
-
-## 🔗 References
-
-- **SCAFFOLD**: Karimireddy et al. "SCAFFOLD: Stochastic Controlled Averaging for Federated Learning"
-- **ISIC 2019**: Tschandl et al. "The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions"
-- **Vision Transformer**: Dosovitskiy et al. "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
-- **Federated Learning**: McMahan et al. "Communication-Efficient Learning of Deep Networks from Decentralized Data"
-
-## 📧 Contact
 
 For questions, issues, or collaborations, please open an issue in the repository.
 
